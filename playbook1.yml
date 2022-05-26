@@ -1,0 +1,12 @@
+---
+- name: copy files from remote servers
+  hosts: all
+  become: true
+  tasks:
+    - name: To copy all file
+      ansible.builtin.copy:
+        src: /home/SRIN Take Home Test/ETL PROCESS.ipynb
+        dest: /home
+
+    - name: To execute script
+      command: /home/ETL PROCESS.ipynb
